@@ -28,3 +28,18 @@ a,
 a:visited {
   color: aquamarine;
 }
+
+ul {
+  list-style: none;
+}
+li {
+  margin-bottom: 1em;
+}
+
+li.with-icon {
+  height: 40px;
+}
+
+li.with-icon .fab {
+  vertical-align: middle;
+}

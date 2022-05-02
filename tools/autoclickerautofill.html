@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Auto Clicker - Auto Fill</title>
+    <link rel="stylesheet" href="tools-style.css" />
+    <link rel="shortcut icon" href="favicon-32x32.png" type="image/x-icon" />
+    <script src="https://kit.fontawesome.com/4b39a549d2.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <main>
+      <h1>Auto Clicker - Auto Fill</h1>
+      <p>
+        Auto Clicker - Auto Fill är ett tillägg till Chrome som man kan använda för att automatiskt
+        fylla i saker i textfält på en webbsida och även klicka på saker i en hemsida. Det tillägget
+        kan användas för att ett schema ska visas automatiskt på web.skola24.se.
+      </p>
+      <p>Följ stegen nedan för att installera och konfigurera Auto Clicker - Auto Fill.</p>
+      <h2>Grundinställningar</h2>
+      <ol>
+        <li>
+          Lägg till Auto Clicker - Auto Fill från
+          <a
+            href="https://chrome.google.com/webstore/detail/auto-clicker-autofill/iapifmceeokikomajpccajhjpacjmibe/"
+            >Chrome Web Store</a
+          >.
+        </li>
+        <li>
+          När du lagt till tillägget så visas en sida för att göra konfigurationer:
+          <br />
+          <em>URL</em>: Den webbsides-adress som tillägget ska köras på. Du som jobbar på Åva anger:
+          <br />
+          <div class="copy-text">
+            <textarea rows="1">
+https://web.skola24.se/timetable/timetable-viewer/taby.skola24.se/%C3%85va%20gymnasium/</textarea
+            ><button class="copy-btn"><i class="fas fa-copy"></i>Kopiera</button>
+          </div>
+          <br />
+          <em>Name</em>: Ett namn på konfigurationen som du själv väljer
+        </li>
+      </ol>
+      <h2>Actions</h2>
+      <p>
+        Ländre ned på sidan med inställningar ska du fylla i <em>Actions</em>. Actions är det som du
+        vill att tillägget ska utföra. Vi vill att tillägget automatiskt ska fylla i ett värde i
+        fältet "Ange ID". Därefter vill vi att tillägget automatiskt ska klicka på "Visa".
+      </p>
+      <img src="./images/skola24-ange-id.png" alt="" />
+      <h3>Skriv in namnet</h3>
+      <img src="./images/autoclicker-conf-2.png" alt="" />
+      <p>I kolumnen <em>Element Finder</em> skriver du in texten</p>
+      <div class="copy-text">
+        <textarea rows="1">SelectorAll::.w-row div:nth-child(6) div.w-flex input</textarea
+        ><button class="copy-btn"><i class="fas fa-copy"></i>Kopiera</button>
+      </div>
+      <p>I kolumnen <em>Value</em> skriver du in ditt lärar-id.</p>
+      <div class="warning">
+        <b>OBS!</b> Skola24 verkar ha ansträngt sig för att det ska vara svårt att göra något
+        automatiserat på deras sida. Värdet i <em>Element Finder</em> kan eventuellt komma att
+        behöva uppdateras.
+      </div>
+      <h3>Lägg in en fördröjning</h3>
+      <p>
+        För att tillägget ska fungera som vi vill måste vi be det vänta lite mer att köra så att
+        sidan hinner laddas ordentligt. För att göra det klickar man på de tre strecken uppe till
+        höger vid knappen Add Action och klickar på <em>Init Wait</em>.<br />
+        <img src="./images/autoclicker-conf-3.png" alt="" />
+        <br />
+        Skriv in värdet 1 i kolumnen <em>Init Wait</em> på raden som fyller i namnet i Ange-ID. Det
+        kommer göra att tillägget väntar en sekund innan det körs.
+      </p>
+
+      <h3>Tillägget ska klicka på "Visa"</h3>
+      <p>Klicka på knappen <em>Add Action</em>. En ny rad skapas. Fyll i</p>
+      <div class="copy-text">
+        <textarea rows="1">SelectorAll::.w-row div:nth-child(6) div.w-flex button</textarea>
+        <button class="copy-btn"><i class="fas fa-copy"></i>Kopiera</button>
+      </div>
+      <img src="./images/autoclicker-conf-4.png" alt="" />
+      <p>I kolumnen <em>Value</em> skriver du in:</p>
+      <div class="copy-text">
+        <textarea rows="1">MouseEvents::click</textarea
+        ><button class="copy-btn"><i class="fas fa-copy"></i>Kopiera</button>
+      </div>
+      <h2>Klart!</h2>
+      <p>Om du nu laddar om din schemavisare så ska den automatiskt visa ditt schema!</p>
+      <p class="read-more">
+        Ytterligare dokumentation av tillägget finns på deras hemsida:
+        <a href="https://getautoclicker.com/">getautoclicker.com</a>
+      </p>
+    </main>
+    <script src="/js/copyToClipBoard.js"></script>
+  </body>
+</html>

@@ -19,7 +19,7 @@ h1 {
 }
 
 .title {
-  font-weight: normal;
+  font-weight: lighter;
   font-size: 50px;
   margin-top: 20vh;
 }
@@ -40,6 +40,6 @@ li.with-icon {
   height: 40px;
 }
 
-li.with-icon .fab {
+li.with-icon .fa-brands {
   vertical-align: middle;
 }

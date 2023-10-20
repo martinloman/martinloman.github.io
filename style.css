@@ -1,13 +1,21 @@
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300&family=Roboto+Mono:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&family=Roboto+Mono:wght@300&display=swap");
 * {
   margin: 0;
   padding: 0;
 }
 
 body {
-  background-color: #2e3e3f;
-  color: white;
+  background-color: #73fbea;
+  min-height: 100vh;
+  color: rgb(46, 46, 46);
+  font-weight: bold;
   font-family: "Roboto Mono", monospace;
+}
+
+.baymax {
+  background-image: url("baymax_dribble.png");
+  background-position: bottom right;
+  background-repeat: no-repeat;
 }
 
 main {
@@ -18,15 +26,18 @@ h1 {
   font-family: "Quicksand", Arial, sans-serif;
 }
 
+p {
+  margin-top: 10px;
+}
+
 .title {
-  font-weight: lighter;
   font-size: 50px;
-  margin-top: 20vh;
+  padding-top: 20vh;
 }
 
 a,
 a:visited {
-  color: aquamarine;
+  color: #fa849e;
 }
 
 ul {
